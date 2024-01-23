@@ -1,0 +1,32 @@
+{% extends "website/index.html" %}
+
+{% block content %}
+<div class="container">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="row">
+            {% if data.name %}
+            <input type="hidden" class="form-control" name="name" value="{{data.name}}" id="exampleFormControlInput1" >
+            {% else %}
+            <input type="hidden" class="form-control" name="name" value="{{user.username}}" id="exampleFormControlInput1" >
+
+            {% endif %}
+          <div class="mb-3 col-md-3">
+            <label for="exampleFormControlInput1" class="form-label">Item*</label>
+            <input type="text" name="item" class="form-control" id="exampleFormControlInput1" value="{{data.item}}">
+          </div>
+          <div class="mb-3 col-md-3">
+            <label for="exampleFormControlInput1" class="form-label">Quantity*</label>
+            <input type="number" name="qty" class="form-control" id="exampleFormControlInput1" value="{{data.qty}}">
+          </div>
+      
+          <div class="mb-3 col-md-3">
+            <label for="exampleFormControlInput1" class="form-label">Description</label>
+            <input type="text" name="desc" class="form-control" id="exampleFormControlInput1" value="{{data.desc}}">
+          </div>
+          <div class="col-md-6">
+            <input type="submit" value="submit" class="btn btn-outline-success">
+          </div>
+    </form>
+</div>
+{% endblock content %}

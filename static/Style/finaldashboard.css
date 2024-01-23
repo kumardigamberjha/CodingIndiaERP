@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif, cursive;
+}
+
+body {
+  background: #13091F;
+  background-size: 150% 350%;
+}
+
+.datetime {
+  font-size: 16px;
+  padding: 0px;
+  color: #FF5F1F;
+  background: black;
+  box-shadow: 0 0 10px #1B1212;
+  width: 300px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif, cursive;
+}
+
+.time {
+  font-size: 1.5em;
+  color: white;
+}
+
+.date {
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+.card {
+  margin: 10px 0;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.card {
+  border-radius: none;
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin: 15px 0;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+  color: #FF5F1F;
+}
+
+.card-stats .card-header {
+  float: left;
+  text-align: center;
+}
+
+.fa-chart-line {
+  font-size: 35px;
+  position: relative;
+  color: #FF5F1F;
+}
+
+.card .card-header {
+  padding: 15px 20px 0;
+  border-radius: 0;
+  z-index: 2;
+  background-color: #1B1212 !important;
+  border-bottom: none;
+}
+
+.card .card-footer .stats .material-icons {
+  position: relative;
+  top: 4px;
+  font-size: 16px;
+}
+
+.card-stats .card-header span {
+  font-size: 36px;
+  line-height: 56px;
+  width: 56px;
+  height: 56px;
+}
+
+.icon.icon-warning {
+  color: #ff9800;
+}
+
+.icon.icon-rose {
+  color: #e91e63;
+}
+
+.icon.icon-success {
+  color: #4caf50;
+}
+
+.icon.icon-info {
+  color: #00bcd4;
+}
+
+.card-stats .card-content {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.card .card-content {
+  padding: 15px 20px;
+  position: relative;
+}
+
+.card .card-content .category {
+  margin-bottom: 0;
+}
+
+.card .category:not([class*="text-"]) {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card .card-title:not(.card-calendar .card-title) {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.card-stats .card-title {
+  margin: 0;
+}
+
+.card .card-footer .stats {
+  line-height: 22px;
+  color: #555555;
+  font-size: 15px;
+}
+
+.card .card-footer div {
+  display: inline-block;
+}
+
+.card .card-header-text h4 {
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-size: 19px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #FF5F1F;
+
+}
+
+.table>thead>tr>th {
+  text-align: center;
+  border-bottom-width: 1px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #FF5F1F;
+}
+
+.table>thead>tr>td {
+  background-color: grey;
+}
+
+.name {
+  text-decoration: none;
+  color: white;
+}
+
+.card .card-content {
+  padding: 15px 20px;
+  position: relative;
+}

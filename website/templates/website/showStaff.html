@@ -1,0 +1,42 @@
+{% extends 'website/index.html' %}
+
+{% block content %}
+    <h1>Show All Staff</h1>
+
+    <table class="table" style="color: white">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Options</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            {% if i.is_superuser %}
+            {% else %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.username}}</td>
+            <td>{{i.email}}</td>
+            <td><a href="{% url 'viewStaffData' i.id %}"><svg xmlns="" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+              </svg></a></td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+         
+        
+
+        </tbody>
+      </table>
+
+
+{% endblock content %}

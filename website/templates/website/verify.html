@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Self</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    {{otp}}
+    <input type="text" name="otp" id="otp">
+
+    <script>
+        $('#otp').change(function(){
+            let otp = $('#otp').val();
+            console.log("OTP: ", otp)
+
+            if (otp == '{{otp}}'){
+                console.log("OTP Matched")
+
+                $.ajax({
+                    type: "POST",
+                    url: '{% url "verifyEmail" %}',
+                    data: {'otp': otp, 'first_name': "{{first_name}}", 'last_name': "{{last_name}}", 'username':'{{username}}', 'email': "{{email}}", 'password1': "{{password1}}", 'password2': "{{password2}}"},
+                    success: function(data){
+                        console.log("OTP SDFFG")
+                        window.location.href = "/"
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+</html>
